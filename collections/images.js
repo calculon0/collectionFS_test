@@ -89,8 +89,10 @@ if(Meteor.isServer){
 
     });
 
-    //if you comment this out, the next Buffer insert won't work
-    var imageFile = new FS.File('/Users/calculon0/Desktop/tech.jpg');
+    //comment this out to see the insert issue
+    //as long as this insert is here, the next insert from Buffer will work
+    //if this insert is commented out, the insert from Buffer won't work
+    var imageFile = new FS.File('../../../../../tech.jpg');
     imageFile.metadata = {
       owner: 'ABCD2345',
       projectID: 'ASDF1234'
